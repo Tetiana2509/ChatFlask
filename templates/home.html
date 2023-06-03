@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+    <link href="static/styleHome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="body"></div>
+<div class="grad"></div>
+<form method="post" class="buttons">
+    <div class="header">
+			<div>The<span>Chat</span></div>
+    </div>
+    <div class = "login">
+        <div>
+            <input type="text" id="name" placeholder="Username" name="name" value="{{name}}">
+        </div>
+        <div class="join">
+            <input type="text" id="code" placeholder="Enter a chat Code" name="code" value="{{code}}">
+            <button type="submit" name="join">Join a Chat</button>
+        </div>
+        <button type="submit" name="create" class="create-btn">Create a Chat</button>
+    </div>
+    <ul>
+        <li>{{error}}</li>
+    </ul>
+</form>
+
+</body>
+</html>
